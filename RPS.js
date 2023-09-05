@@ -1,38 +1,21 @@
-var P = "papel";
-var R = "piedra";
-var S = "tijera";
+var op1 = "Piedra";
+var op2 = "Papel";
+var op3 = "Tijera";
 
-
-var resultado = function(user, cpu) {
-    if (user != cpu){
-        if (user == P){
-            if(cpu == R){
-                console.log("User wins");
-            }
-            else if (cpu==S){
-                console.log("Cpu wins");
-            }
+var resultado = function(user, cpu){
+    if(user != cpu){
+        if(user === op1 && cpu === op3){
+            console.log("el usuario GANO con "+ op1)
+        }else if(user === op2 && cpu === op1){
+            console.log( "el usuario GANO con " + op2)
+        }else if(user === op3 && cpu === op2){
+            console.log("el usuario GANO con " + op3)
+        }else{
+            console.log("La CPU Gano!!")
         }
-        else if ( user == R){
-            if (cpu == P){
-                console.log("cpu wins");
-            }
-            else if (cpu == S){
-                console.log("user wins");
-            }
-            }
-        else if (user == S){
-            if (cpu == p){
-                console.log("user wins");
-            }
-            else if (cpu==R){
-                console.log("cpu wins");
-            }
-        }
-    } else {
-        console.log("Empate");
-    }  
-}
+    }else if(user === cpu){
+        console.log("Empate")
+    }
+};
 
-
-resultado(P, R)
+resultado(op1,op3) //el usuario GANO con Piedra```
